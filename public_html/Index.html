@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>CCA Strategic Media</title>
+        <link rel="stylesheet" type="text/css" href="CSS/Index.css">
+        <script type="text/javascript" src="JS/Index.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body id="body">
+        <div id="container">
+            <div id="main">
+                <img id="logo" src="Resources/CCALogo.jpg"/>
+                <H2>CCA Strategic Media</h2>
+                <div id="ProjectsDiv">
+                    <form>
+                        <fieldset>
+                            <legend>Projects</legend>
+                            <ol id="Projects">
+                                <li id="sampleProject" onclick="getProjectTasks('sampleProject')">Sample Project</li>
+                            </ol>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
