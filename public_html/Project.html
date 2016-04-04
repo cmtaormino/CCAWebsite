@@ -2,19 +2,54 @@
 <html>
     <head>
         <title>CCA Strategic Media</title>
-        <link rel="stylesheet" type="text/css" href="CSS/AccountRequest.css">
-        <script type="text/javascript" src="JS/AccountRequest.js"></script>
+        <link rel="stylesheet" type="text/css" href="CSS/Project.css">
+        <script type="text/javascript" src="JS/Project.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body id="body">
         <div id="container">
             <div id="main">
-                <img id="logo" src="Resources/CCALogo.jpg"/>
+                <p>
+                    <button id="button" type="button" onclick="loadPage('Login.html')">Log Out</button>
+                    <button id="button" type="button" onclick="loadPage('Index.html')">Back</button>
+                </p>
+                <br>
+                <br>
+                <img id="logo" src="Resources/CCALogo.jpg" onclick="loadPage('Index.html')"/>
                 <H2>CCA Strategic Media</h2>
-                <form>
+                <form id="projectInfo">
                     <fieldset>
-                        <legend>Project</legend>
+                        <legend>Client Info</legend>
+                        <p>Client Name:<input type="text" id="ClientName"/></p>
+                        <p>Point of Contact Name:<input type="text" id="POCName"/></p>
+                        <p>Email Address:<input type="text" id="POCEmail"/></p>
+                        <p>Office Phone:<input type="text" id="POCOfficePhone"/></p>
+                        <p>Cell Phone:<input type="text" id="POCCellPhone"/></p>
+                        <p>Fax Number:<input type="text" id="POCFax"/></p>
+                        <p>Mailing Address:<input type="text" id="POCMailAddress"/></p>
+                        <p>City:<input type="text" id="POCCity"/></p>
+                        <p>State:<input type="text" id="POCState"/></p>
+                        <p>Zip Code:<input type="text" id="POCZip"/></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Project Info</legend>
+                        <p>Project Name:<input type="text" id="ProjectName"/></p>
+                        <p>Project Description:</p><textarea rows="4" cols="50" id="Desc"></textarea>
+                        <p>Start Date<input type="date" id="StartDate"/></p>
+                        <p>End Date:<input type="date" id="EndDate"/></p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tasks</legend>
+                        <ol id="CompletedTasks">
+                                <li id="CompletedTask" onclick="getCompletedTasks()"><b>Completed Tasks</b></li>
+                        </ol>
+                        <ol id="TasksInProgress">
+                                <li id="TasksInProgress" onclick="getTasksInProgress()"><b>Tasks in Progress</b></li>
+                        </ol>
+                        <ol id="PendingTasks">
+                                <li id="pendingTasks" onclick="getPendingTasks()"><b>Pending Tasks</b></li>
+                        </ol>
                     </fieldset>
                 </form>
             </div>

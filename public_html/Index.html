@@ -10,14 +10,21 @@
     <body id="body">
         <div id="container">
             <div id="main">
-                <img id="logo" src="Resources/CCALogo.jpg"/>
+                <p>
+                    <button id="button" type="button" onclick="loadPage('Login.html')">Log Out</button>
+                    <button id="button" type="button" onclick="loadPage('Bonus.html')">Year End Bonus</button>
+                    <button id="button" type="button" onclick="loadPage('NewProject.html')">Create Project</button>
+                </p>
+                <br>
+                <br>
+                <img id="logo" src="Resources/CCALogo.jpg" onclick="loadPage('Index.html')"/>
                 <H2>CCA Strategic Media</h2>
                 <div id="ProjectsDiv">
                     <form>
                         <fieldset>
                             <legend>Projects</legend>
                             <ol id="Projects">
-                                <li id="sampleProject" onclick="getProjectTasks('sampleProject')">Sample Project</li>
+                                <li id="sampleProject" onclick="getProjectTasks('sampleProject')"><b>Sample Project</b> | Sample Client, 1/1/2015 through 1/1/2016, John Doe, 15 tasks completed out of 30 total tasks</li>
                             </ol>
                         </fieldset>
                     </form>

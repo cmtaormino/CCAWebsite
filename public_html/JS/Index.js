@@ -1,5 +1,5 @@
 function getProjectTasks(projectName){
-    if(document.getElementById(projectName).childNodes.length < 2){
+    if(document.getElementById(projectName).childNodes.length < 3){
         var project = document.getElementById(projectName);
         var taskList = document.createElement('ol');
         
@@ -14,6 +14,15 @@ function getProjectTasks(projectName){
         taskList.appendChild(projectPage);
         
         project.appendChild(taskList);
+    }
+    else{
+        var list = document.getElementById(projectName).childNodes;
+        var nodes = Array.prototype.slice.call(list);
+        var node;
+        for(var i = 1; i<nodes.length; i++){
+            node = nodes.pop()
+            node.parentNode.removeChild(node);
+        }
     }
 }
 
