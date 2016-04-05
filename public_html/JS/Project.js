@@ -3,8 +3,8 @@ function loadPage(pageToLoad) {
 }
 
 function getCompletedTasks(){
-    if(document.getElementById('CompletedTasks').childNodes.length < 4){
-        var project = document.getElementById('CompletedTasks');
+    if(document.getElementById('CompletedTask').childNodes.length < 2){
+        var project = document.getElementById('CompletedTask');
         var taskList = document.createElement('ol');
         
         var taskOne = document.createElement('li');
@@ -15,19 +15,19 @@ function getCompletedTasks(){
         project.appendChild(taskList);
     }
     else{
-        var list = document.getElementById('CompletedTasks').childNodes;
+        var list = document.getElementById('CompletedTask').childNodes;
         var nodes = Array.prototype.slice.call(list);
         var node;
-        for(var i = 3; i<nodes.length; i++){
-            node = nodes.pop()
+        for(var i = 1; i<nodes.length; i++){
+            node = nodes.pop();
             node.parentNode.removeChild(node);
         }
     }
 }
 
 function getTasksInProgress(){
-    if(document.getElementById('TasksInProgress').childNodes.length < 4){
-        var project = document.getElementById('TasksInProgress');
+    if(document.getElementById('TaskInProgress').childNodes.length < 2){
+        var project = document.getElementById('TaskInProgress');
         var taskList = document.createElement('ol');
         
         var taskOne = document.createElement('li');
@@ -38,19 +38,19 @@ function getTasksInProgress(){
         project.appendChild(taskList);
     }
     else{
-        var list = document.getElementById('TasksInProgress').childNodes;
+        var list = document.getElementById('TaskInProgress').childNodes;
         var nodes = Array.prototype.slice.call(list);
         var node;
-        for(var i = 3; i<nodes.length; i++){
-            node = nodes.pop()
+        for(var i = 1; i<nodes.length; i++){
+            node = nodes.pop();
             node.parentNode.removeChild(node);
         }
     }
 }
 
 function getPendingTasks(){
-    if(document.getElementById('PendingTasks').childNodes.length < 4){
-        var project = document.getElementById('PendingTasks');
+    if(document.getElementById('PendingTask').childNodes.length < 2){
+        var project = document.getElementById('PendingTask');
         var taskList = document.createElement('ol');
         
         var taskOne = document.createElement('li');
@@ -61,11 +61,11 @@ function getPendingTasks(){
         project.appendChild(taskList);
     }
     else{
-        var list = document.getElementById('PendingTasks').childNodes;
+        var list = document.getElementById('PendingTask').childNodes;
         var nodes = Array.prototype.slice.call(list);
         var node;
-        for(var i = 3; i<nodes.length; i++){
-            node = nodes.pop()
+        for(var i = 1; i<nodes.length; i++){
+            node = nodes.pop();
             node.parentNode.removeChild(node);
         }
     }

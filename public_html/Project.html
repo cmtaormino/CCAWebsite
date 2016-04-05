@@ -36,7 +36,7 @@
                         <legend>Project Info</legend>
                         <p>Project Name:<input type="text" id="ProjectName"/></p>
                         <p>Project Description:</p><textarea rows="4" cols="50" id="Desc"></textarea>
-                        <p>Start Date<input type="date" id="StartDate"/></p>
+                        <p>Start Date:<input type="date" id="StartDate"/></p>
                         <p>End Date:<input type="date" id="EndDate"/></p>
                     </fieldset>
                     <fieldset>
@@ -45,10 +45,10 @@
                                 <li id="CompletedTask" onclick="getCompletedTasks()"><b>Completed Tasks</b></li>
                         </ol>
                         <ol id="TasksInProgress">
-                                <li id="TasksInProgress" onclick="getTasksInProgress()"><b>Tasks in Progress</b></li>
+                                <li id="TaskInProgress" onclick="getTasksInProgress()"><b>Tasks in Progress</b></li>
                         </ol>
                         <ol id="PendingTasks">
-                                <li id="pendingTasks" onclick="getPendingTasks()"><b>Pending Tasks</b></li>
+                                <li id="PendingTask" onclick="getPendingTasks()"><b>Pending Tasks</b></li>
                         </ol>
                     </fieldset>
                 </form>
@@ -56,4 +56,3 @@
         </div>
     </body>
 </html>
-
