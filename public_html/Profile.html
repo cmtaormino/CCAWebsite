@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CCA Strategic Media</title>
+        <link rel="stylesheet" type="text/css" href="CSS/Profile.css">
+        <script type="text/javascript" src="JS/Profile.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body id="body">
+        <div id="container">
+            <div id="main">
+                <p>
+                    <button id="button" type="button" onclick="loadPage('Login.html')">Log Out</button>
+                    <button id="button" type="button" onclick="loadPage('Bonus.html')">Year End Bonus</button>
+                    <button id="button" type="button" onclick="loadPage('Index.html')">Back to Projects</button>
+                </p>
+                <br>
+                <br>
+                <img id="logo" src="Resources/CCALogo.jpg" onclick="loadPage('Index.html')"/>
+                <H2>CCA Strategic Media</h2>
+                <form id="profile">
+                    <fieldset>
+                        <legend>Profile</legend>
+                        <p>First Name:<input type="text" id="FirstName"/></p>
+                        <p>Last Name:<input type="text" id="LastName"/></p>
+                        <p>Email Address:<input type="text" id="EmailAddress"/></p>
+                        <p>Password:<input type="password" id="password"/></p>
+                        <p>Company:<input type="text" id="Company"/></p>
+                        <p>Job Title:<input type="text" id="JobTitle"/></p>
+                        <p>Department:<input type="text" id="Department"/></p>
+                        <p>Employee Bio:</p><textarea rows="4" cols="50" id="Bio"></textarea>
+                    </fieldset>
+                    <p>
+                        <button id="button" type="button" onclick="save()">Save Changes</button>
+                    </p>
+                    <br>
+                    <br>
+                    <fieldset>
+                        <legend>Pending Account Requests</legend>
+                        <select id="PendingRequests">
+                        </select>
+                        <button id="button" type="button" onclick="handleAccountRequest()">Handle Request</button>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Pending Account Changes</legend>
+                        <select id="PendingChanges">
+                        </select>
+                        <button id="button" type="button" onclick="handleChangeRequest()">Handle Request</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

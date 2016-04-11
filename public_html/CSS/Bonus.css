@@ -14,15 +14,7 @@
     text-align: center;
 }
 
-#ProjectsDiv {
-    text-align: left;
-}
-
-#Projects {
-    cursor: pointer;
-}
-
-#button {
+button {
     background-color: white;
     color: black;
     border: 2px solid #EA2644;
@@ -33,29 +25,20 @@
     margin: 5px;
 }
 
-#button:hover {
+button:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     background-color: #EA2644;
+}
+
+#Bonus {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: left;
 }
 
 #logo {
     cursor: pointer;
     width: 100px;
-}
-
-ol li {
-    list-style: none;
-    background: #14A74F;
-    margin: 5px;
-    padding: 5px;
-    margin-left: 35px;
-    border-style: outset;
-    border-width: 2px;
-    border-color: #C0C0C0;
-    transition-duration: 0.4s;
-    border-radius: 5px;
-}
-
-li:hover{
-    background-color: #1ED467;
 }

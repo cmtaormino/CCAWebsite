@@ -2,6 +2,6 @@ function loadPage(pageToLoad) {
    window.location.href=pageToLoad;
 }
 
-function createAccount() {
+function saveChanges() {
     loadPage('Profile.html');
 }

@@ -12,15 +12,18 @@
             <div id="main">
                 <p>
                     <button id="button" type="button" onclick="loadPage('Login.html')">Log Out</button>
-                    <button id="button" type="button" onclick="loadPage('Index.html')">Back</button>
+                    <button id="button" type="button" onclick="loadPage('Profile.html')">Profile</button>
+                    <button id="button" type="button" onclick="loadPage('Index.html')">Back to Projects</button>
                 </p>
                 <br>
                 <br>
-                <img id="logo" src="Resources/CCALogo.jpg"/>
+                <img id="logo" src="Resources/CCALogo.jpg" onclick="loadPage('Index.html')"/>
                 <H2>CCA Strategic Media</h2>
-                <form>
+                <form id="Bonus">
                     <fieldset>
-                        <legend>Projects</legend>
+                        <legend>Bonus</legend>
+                        <p>Potential Bonus:<input type="text" id="PotBonus"/></p>
+                        <p>Actual Bonus:<input type="text" id="ActBonus"/></p>
                     </fieldset>
                 </form>
             </div>

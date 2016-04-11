@@ -2,8 +2,8 @@
 <html>
     <head>
         <title>CCA Strategic Media</title>
-        <link rel="stylesheet" type="text/css" href="CSS/Task.css">
-        <script type="text/javascript" src="JS/Task.js"></script>
+        <link rel="stylesheet" type="text/css" href="CSS/CreateTask.css">
+        <script type="text/javascript" src="JS/CreateTask.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -18,20 +18,21 @@
                 </p>
                 <br>
                 <br>
-                <img id="logo" src="Resources/CCALogo.jpg"  onclick="loadPage('Index.html')"/>
+                <img id="logo" src="Resources/CCALogo.jpg" onclick="loadPage('Index.html')"/>
                 <H2>CCA Strategic Media</h2>
                 <form id="task">
                     <fieldset>
                         <legend>Task</legend>
-                        <p>Assignee:<input type="text" id="Assignee"/></p>
+                        <p>Assignee:</p>
+                        <select id="assignees">
+                        </select>
                         <p>Start Date:<input type="date" id="StartDate"/></p>
                         <p>End Date:<input type="date" id="EndDate"/></p>
                         <p>Task Description:</p><textarea rows="4" cols="50" id="Desc"></textarea>
                         <p>Point Value:<input type="text" id="PointValue"/></p>
-                        <p>Percentage Complete:<input type="text" id="PerComplete"/></p>
                     </fieldset>
                     <p>
-                        <button id="button" type="button" onclick="submit()">Submit Changes</button>
+                            <button id="button" type="button" onclick="submit()">Submit</button>
                     </p>
                     <br>
                     <br>
