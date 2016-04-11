@@ -74,3 +74,7 @@ function getPendingTasks(){
 function createTask() {
     loadPage('CreateTask.html');
 }
+
+function save() {
+    alert("Your chnages have been saved");
+}

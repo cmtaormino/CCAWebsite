@@ -3,7 +3,7 @@ function loadPage(pageToLoad) {
 }
 
 function submitReset() {
-    window.alert("A message has been sent to an Administrator, you will recieve an email with a new password.");
+    window.alert("A message has been sent to an Administrator. You will recieve an email with a new password.");
     loadPage("Login.html");
 }
 

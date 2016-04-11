@@ -15,6 +15,6 @@ function loadPage(pageToLoad) {
 }
 
 function submitRequest() {
-    window.alert("Your account request has been sent to an Administrator. An email will be sent to the provided email address.");
+    window.alert("Your account request has been sent to an Administrator. An email will be sent to the provided email addressonce the account has been created.");
     loadPage("Login.html");
 }
