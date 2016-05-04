@@ -22,23 +22,23 @@
                 <form id="projectInfo">
                     <fieldset>
                         <legend>Client Info</legend>
-                        <p>Client Name:<input type="text" id="ClientName"/></p>
-                        <p>Point of Contact Name:<input type="text" id="POCName"/></p>
-                        <p>Email Address:<input type="text" id="POCEmail"/></p>
-                        <p>Office Phone:<input type="text" id="POCOfficePhone"/></p>
-                        <p>Cell Phone:<input type="text" id="POCCellPhone"/></p>
-                        <p>Fax Number:<input type="text" id="POCFax"/></p>
-                        <p>Mailing Address:<input type="text" id="POCMailAddress"/></p>
-                        <p>City:<input type="text" id="POCCity"/></p>
-                        <p>State:<input type="text" id="POCState"/></p>
-                        <p>Zip Code:<input type="text" id="POCZip"/></p>
+                        <p>Client Name:<input type="text" id="ClientName" value='CCA Strategic Media'/></p>
+                        <p>Point of Contact Name:<input type="text" id="POCName" value='Sephen Taormino'/></p>
+                        <p>Email Address:<input type="text" id="POCEmail" value='ctaormino@CCA.com'/></p>
+                        <p>Office Phone:<input type="text" id="POCOfficePhone" value='123-456-7890'/></p>
+                        <p>Cell Phone:<input type="text" id="POCCellPhone" value='098-765-4321'/></p>
+                        <p>Fax Number:<input type="text" id="POCFax" value='N/A'/></p>
+                        <p>Mailing Address:<input type="text" id="POCMailAddress" value='3101 Jackson Ridge Court'/></p>
+                        <p>City:<input type="text" id="POCCity" value='Phoenix'/></p>
+                        <p>State:<input type="text" id="POCState" value='Maryland'/></p>
+                        <p>Zip Code:<input type="text" id="POCZip" value='21131'/></p>
                     </fieldset>
                     <fieldset>
                         <legend>Project Info</legend>
-                        <p>Project Name:<input type="text" id="ProjectName"/></p>
-                        <p>Project Description:</p><textarea rows="4" cols="50" id="Desc"></textarea>
-                        <p>Start Date:<input type="date" id="StartDate"/></p>
-                        <p>End Date:<input type="date" id="EndDate"/></p>
+                        <p>Project Name:<input type="text" id="ProjectName" value='Scheduling Software for CCA'/></p>
+                        <p>Project Description:</p><textarea rows="4" cols="50" id="Desc">Senior project for Chris Taormino.</textarea>
+                        <p>Start Date:<input type="date" id="StartDate" value='2016-01-01'/></p>
+                        <p>End Date:<input type="date" id="EndDate" value='2016-05-04'/></p>
                     </fieldset>
                     <p>
                         <button id="button" type="button" onclick="save()">Submit Changes</button>
@@ -48,13 +48,22 @@
                     <fieldset>
                         <legend>Tasks</legend>
                         <ol id="CompletedTasks">
-                                <li id="CompletedTask" onclick="getCompletedTasks()"><b>Completed Tasks</b></li>
+                                <li id="CompletedTask" onclick="getCompletedTasks()"><b>Completed Tasks</b>
+                                <ol>
+                                    <li onclick="loadPage('Task.html')">Requirements Collection</li>
+                                </ol></li>
                         </ol>
                         <ol id="TasksInProgress">
-                                <li id="TaskInProgress" onclick="getTasksInProgress()"><b>Tasks in Progress</b></li>
+                                <li id="TaskInProgress" onclick="getTasksInProgress()"><b>Tasks in Progress</b>
+                                <ol>
+                                    <li onclick="loadPage('Task.html')">Development</li>
+                                </ol></li>
                         </ol>
                         <ol id="PendingTasks">
-                                <li id="PendingTask" onclick="getPendingTasks()"><b>Pending Tasks</b></li>
+                                <li id="PendingTask" onclick="getPendingTasks()"><b>Pending Tasks</b>
+                                <ol>
+                                    <li onclick="loadPage('Task.html')">Present</li>
+                                </ol></li>
                         </ol>
                         <p>
                             <button id="button" type="button" onclick="createTask()">Create Task</button>

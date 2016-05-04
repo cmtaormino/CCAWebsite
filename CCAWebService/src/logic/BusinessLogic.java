@@ -35,29 +35,48 @@ public class BusinessLogic {
     }
     
     public static boolean checkKey(String key){
-        return true;
+        return Database.getKey(key);
     }
     
     public static Bonus getBonus(String profileName){
-        return null;
+        int actualBonus = Database.getAcutalBonus(profileName);
+        int potentialBonus = Database.getPotentialBonus(profileName);
+        
+        return new Bonus(0, potentialBonus, actualBonus);
     }
     
-    public static String[] getAccountChanges(){
-        return null;
+    public static AccountList getAccountChanges(){
+
+        ArrayList<Account> accountList = Database.getPendingAccountChanges();
+        
+        return new AccountList(0, (account[])accountList.toArray());
     }
     
-    public static void requestAccount(String firstName, String lastName, String email, String password, String comapny, String jobTitle, String department, String bio){
+    public static void requestAccount(String firstName, String lastName, String email, String password, String company, String jobTitle, String department, String bio){
+        Database.createAccountRequest(firstName, lastName, email, password, company, jobTitle, department, bio);
     }
     
     public static ProjectList getProjectList(String[] projects){
+        ArrayList<Project> projectList = new ArrayList<Project>();
+        
+        for(int i = 0; i < projects.length; i++){
+            projectList.add(Database.getProject(projects[i]));
+        }
+        
+        return new ProjectList(0, (Project)projectList.toArray());
+    }
+    
+    public static TaskList getTaskList(String[] tasks, String type, String projectName){
+        ArrayList<Project> taskList = new ArrayList<Project>();
+        
+        for(int i = 0; i < tasks.length; i++){
+            taskList.add(Database.getTaskList(tasks[i], type, projectName));
+        }
+        
         return null;
     }
     
-    public static TaskList getTaskList(String[] tasks, String type){
-        return null;
-    }
-    
-    public static String[] getAssignees(){
+    public static StringList getAssignees(){
         return null;
     }
     

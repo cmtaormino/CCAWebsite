@@ -32,9 +32,9 @@ public class ServiceController {
     }
     
     @RequestMapping("/getAccountChanges")
-    public String[] getAccountChanges() {
+    public AccountList getAccountChanges() {
         
-        return BusinessLogic.getAccountChanges();
+        return BusinessLogic.getAccountChanges(profileNames);
     }
     
     @RequestMapping("/requestAccount")
@@ -57,13 +57,13 @@ public class ServiceController {
     }
     
     @RequestMapping("/getTaskList")
-    public ProjectList taskList(@RequestParam(value="tasks[]") String[] tasks, @RequestParam(value="type") String type) {
+    public ProjectList taskList(@RequestParam(value="tasks[]") String[] tasks, @RequestParam(value="type") String type, @RequestParam(value="proejctName") String projectName) {
         
-        return BusinessLogic.getTaskList(tasks, type);
+        return BusinessLogic.getTaskList(tasks, type, projectName);
     }
     
     @RequestMapping("/getAssignees")
-    public String[] assignees() {
+    public StringList assignees() {
         
         return BusinessLogic.getAssignees();
     }
