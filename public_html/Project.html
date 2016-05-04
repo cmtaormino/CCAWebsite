@@ -51,19 +51,18 @@
                                 <li id="CompletedTask" onclick="getCompletedTasks()"><b>Completed Tasks</b>
                                 <ol>
                                     <li onclick="loadPage('Task.html')">Requirements Collection</li>
-                                </ol></li>
-                        </ol>
-                        <ol id="TasksInProgress">
-                                <li id="TaskInProgress" onclick="getTasksInProgress()"><b>Tasks in Progress</b>
-                                <ol>
                                     <li onclick="loadPage('Task.html')">Development</li>
                                 </ol></li>
                         </ol>
-                        <ol id="PendingTasks">
-                                <li id="PendingTask" onclick="getPendingTasks()"><b>Pending Tasks</b>
+                        <ol id="TasksInProgress">
+                            <li id="TaskInProgress" onclick="getTasksInProgress()"><b>Tasks in Progress</b>
                                 <ol>
                                     <li onclick="loadPage('Task.html')">Present</li>
-                                </ol></li>
+                                </ol>
+                                </li>
+                        </ol>
+                        <ol id="PendingTasks">
+                                <li id="PendingTask" onclick="getPendingTasks()"><b>Pending Tasks</b></li>
                         </ol>
                         <p>
                             <button id="button" type="button" onclick="createTask()">Create Task</button>

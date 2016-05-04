@@ -4,7 +4,7 @@ function getProjectTasks(projectName){
         var taskList = document.createElement('ol');
         
         var taskOne = document.createElement('li');
-        taskOne.appendChild(document.createTextNode('Development'));
+        taskOne.appendChild(document.createTextNode('Present'));
         taskOne.onclick = function(){ loadPage('Task.html');}
         taskList.appendChild(taskOne);
         
